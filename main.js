@@ -7,13 +7,13 @@ nodeCheckbox[0].addEventListener('change', onCheckChanged, false);
 nodeCheckbox[1].addEventListener('change', onCheckChanged, false);
 
 // チェック状態変更イベントハンドラ
-function onCheckChanged(event) {
+function onCheckChanged(event) { 
   var nodeItems = nodeApp.querySelectorAll('.item'); // 商品のーどのリスト
   var nodeCount = nodeApp.querySelector('.count');   // 表示件数のノード
   var count     = nodeItems.length;                  // 表示件数
 
   // 全ての商品ノードを一旦表示する
-  for (var i=0; i<nodeItems.lengthl; i++) {
+  for (var i=0; i<nodeItems.length; i++) {
     showNode(nodeItems[i]);
   }
 
