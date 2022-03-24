@@ -33,7 +33,7 @@
       </div>
       <!-- 商品一覧 -->
       <div class="list">
-        <div class="item" v-for="product in filteredList">
+        <div class="item" v-for="product in filteredList" v-bind:key="product.id">
         <!-- この範囲がproductsの配列要素の数だけ繰り返される -->
           <figure class="image">
             <template v-if="product.isSale">
