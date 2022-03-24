@@ -39,7 +39,7 @@ var app = new Vue ({
     filteredList: function() {
       // 絞り込み後の商品リストを格納する新しい配列
       var newList = [];
-      for (var i=0; i<this.products.length; i++) {
+    for (var i=0; i<this.products.length; i++) {
         // 表示対象かどうかを判定するフラグ
         var isShow = true;
         // i番目の商品が表示対象かどうかを判定する
@@ -56,6 +56,16 @@ var app = new Vue ({
         newList.push(this.products[i]);
       }
     }
+    // 新しい配列を並び替える
+    if (this.sortOrder == 1) {
+      // 元の順番にpushしているので並び替え済み
+    }
+    else if (this.sortOrder == 2) {
+      // 価格が安い順に並び替える
+      newList.sort(function(a,b) {
+        return a.price - b.price;
+    });
+  }
       // 絞り込み後の商品リストを返す
       return newList;
     }
